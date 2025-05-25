@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><title>11. Емоджі з кодом</title></head>
+<body>
+  <h1>11. Емоджі з кодом</h1>
+  <input type="text" id="code" placeholder="Введіть код емоджі (наприклад 128512)">
+  <button onclick="showEmoji()">Показати емоджі</button>
+  <p id="result"></p>
+  <script>
+    function showEmoji() {
+      let code = parseInt(document.getElementById("code").value);
+      if (isNaN(code)) {
+        document.getElementById("result").innerText = "Введіть числовий код!";
+        return;
+      }
+      document.getElementById("result").innerText = String.fromCodePoint(code);
+    }
+  </script>
+</body>
+</html>

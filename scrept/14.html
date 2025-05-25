@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><title>14. Факторіал</title></head>
+<body>
+  <h1>14. Факторіал</h1>
+  <input type="number" id="num" placeholder="Введіть число">
+  <button onclick="factorial()">Обчислити</button>
+  <p id="result"></p>
+  <script>
+    function factorial() {
+      let n = parseInt(document.getElementById("num").value);
+      if (isNaN(n) || n < 0) {
+        document.getElementById("result").innerText = "Введіть невід'ємне ціле число!";
+        return;
+      }
+      let fact = 1;
+      for (let i = 2; i <= n; i++) fact *= i;
+      document.getElementById("result").innerText = "Факторіал " + n + " = " + fact;
+    }
+  </script>
+</body>
+</html>

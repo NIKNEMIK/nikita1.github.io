@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><title>13. Степінь</title></head>
+<body>
+  <h1>13. Степінь</h1>
+  <input type="number" id="base" placeholder="Основа">
+  <input type="number" id="exp" placeholder="Степінь">
+  <button onclick="power()">Обчислити</button>
+  <p id="result"></p>
+  <script>
+    function power() {
+      let base = parseFloat(document.getElementById("base").value);
+      let exp = parseInt(document.getElementById("exp").value);
+      if (isNaN(base) || isNaN(exp)) {
+        document.getElementById("result").innerText = "Введіть числа!";
+        return;
+      }
+      document.getElementById("result").innerText = base + "^" + exp + " = " + Math.pow(base, exp);
+    }
+  </script>
+</body>
+</html>

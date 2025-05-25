@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><title>9. Пори року</title></head>
+<body>
+  <h1>9. Пори року</h1>
+  <input type="number" id="month" placeholder="Введіть номер місяця (1-12)">
+  <button onclick="showSeason()">Показати пору року</button>
+  <p id="result"></p>
+  <script>
+    function showSeason() {
+      let month = parseInt(document.getElementById("month").value);
+      let season = "";
+      switch(month) {
+        case 12:
+        case 1:
+        case 2: season = "Зима"; break;
+        case 3:
+        case 4:
+        case 5: season = "Весна"; break;
+        case 6:
+        case 7:
+        case 8: season = "Літо"; break;
+        case 9:
+        case 10:
+        case 11: season = "Осінь"; break;
+        default: season = "Некоректний номер місяця";
+      }
+      document.getElementById("result").innerText = season;
+    }
+  </script>
+</body>
+</html>

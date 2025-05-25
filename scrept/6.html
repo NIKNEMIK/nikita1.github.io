@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><title>6. Пропуск на сайт за віком</title></head>
+<body>
+  <h1>6. Пропуск на сайт за віком</h1>
+  <input type="number" id="age" placeholder="Введіть свій вік">
+  <button onclick="checkAge()">Перевірити</button>
+  <p id="result"></p>
+  <script>
+    function checkAge() {
+      let age = parseInt(document.getElementById("age").value);
+      if (isNaN(age)) {
+        document.getElementById("result").innerText = "Введіть коректний вік!";
+        return;
+      }
+      if (age >= 18) {
+        document.getElementById("result").innerText = "Доступ дозволено ✅";
+      } else {
+        document.getElementById("result").innerText = "Доступ заборонено ❌";
+      }
+    }
+  </script>
+</body>
+</html>

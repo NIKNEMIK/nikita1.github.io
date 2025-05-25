@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><title>3. Вгадати героя</title></head>
+<body>
+  <h1>3. Вгадати героя</h1>
+  <input type="text" id="hero" placeholder="Введіть ім'я героя">
+  <button onclick="guess()">Вгадати</button>
+  <p id="result"></p>
+  <script>
+    function guess() {
+      const answer = document.getElementById("hero").value.toLowerCase();
+      const correct = "шевченко";
+      document.getElementById("result").innerText = 
+        answer === correct ? "✅ Правильно!" : "❌ Ні, це не той герой.";
+    }
+  </script>
+</body>
+</html>

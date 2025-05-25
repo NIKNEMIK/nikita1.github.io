@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><title>7. Довідники switch case</title></head>
+<body>
+  <h1>7. Довідники за допомогою switch case</h1>
+  <input type="text" id="day" placeholder="Введіть день тижня (1-7)">
+  <button onclick="showDay()">Показати день</button>
+  <p id="result"></p>
+  <script>
+    function showDay() {
+      let day = document.getElementById("day").value;
+      let text = "";
+      switch(day) {
+        case '1': text = "Понеділок"; break;
+        case '2': text = "Вівторок"; break;
+        case '3': text = "Середа"; break;
+        case '4': text = "Четвер"; break;
+        case '5': text = "П’ятниця"; break;
+        case '6': text = "Субота"; break;
+        case '7': text = "Неділя"; break;
+        default: text = "Невірний номер дня";
+      }
+      document.getElementById("result").innerText = text;
+    }
+  </script>
+</body>
+</html>

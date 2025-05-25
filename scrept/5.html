@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><title>5. Банкомат</title></head>
+<body>
+  <h1>5. Банкомат</h1>
+  <input type="number" id="amount" placeholder="Сума зняття">
+  <button onclick="atm()">Зняти</button>
+  <p id="atmResult"></p>
+  <script>
+    let balance = 1000;
+    function atm() {
+      let amount = parseFloat(document.getElementById("amount").value);
+      if (amount > balance) {
+        document.getElementById("atmResult").innerText = "Недостатньо коштів ❌";
+      } else {
+        balance -= amount;
+        document.getElementById("atmResult").innerText = "Знято: " + amount + " грн. Залишок: " + balance + " грн.";
+      }
+    }
+  </script>
+</body>
+</html>

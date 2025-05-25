@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><title>4. Перевірка логіну та пароля</title></head>
+<body>
+  <h1>4. Перевірка логіну та пароля</h1>
+  <input type="text" id="login" placeholder="Логін">
+  <input type="password" id="password" placeholder="Пароль">
+  <button onclick="check()">Увійти</button>
+  <p id="message"></p>
+  <script>
+    function check() {
+      let login = document.getElementById("login").value;
+      let password = document.getElementById("password").value;
+      if (login === "admin" && password === "1234") {
+        document.getElementById("message").innerText = "Доступ дозволено ✅";
+      } else {
+        document.getElementById("message").innerText = "Доступ заборонено ❌";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>1. Площа і периметр</title>
+</head>
+<body>
+  <h1>1. Площа та периметр трикутника та прямокутника</h1>
+  <h2>Прямокутник</h2>
+  <input type="number" id="a" placeholder="Сторона A">
+  <input type="number" id="b" placeholder="Сторона B">
+  <button onclick="calcRect()">Обчислити</button>
+  <p id="rectResult"></p>
+
+  <h2>Трикутник</h2>
+  <input type="number" id="t1" placeholder="Сторона 1">
+  <input type="number" id="t2" placeholder="Сторона 2">
+  <input type="number" id="t3" placeholder="Сторона 3">
+  <button onclick="calcTri()">Обчислити</button>
+  <p id="triResult"></p>
+
+  <script>
+    function calcRect() {
+      let a = parseFloat(document.getElementById("a").value);
+      let b = parseFloat(document.getElementById("b").value);
+      let p = 2 * (a + b);
+      let s = a * b;
+      document.getElementById("rectResult").innerText = `Площа: ${s}, Периметр: ${p}`;
+    }
+
+    function calcTri() {
+      let a = parseFloat(document.getElementById("t1").value);
+      let b = parseFloat(document.getElementById("t2").value);
+      let c = parseFloat(document.getElementById("t3").value);
+      let p = (a + b + c) / 2;
+      let s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+      document.getElementById("triResult").innerText = `Площа: ${s.toFixed(2)}, Периметр: ${a + b + c}`;
+    }
+  </script>
+</body>
+</html>

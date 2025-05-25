@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><title>12. Сума чисел</title></head>
+<body>
+  <h1>12. Сума чисел, які вводить користувач</h1>
+  <input type="text" id="numbers" placeholder="Введіть числа через кому">
+  <button onclick="sumNumbers()">Порахувати суму</button>
+  <p id="result"></p>
+  <script>
+    function sumNumbers() {
+      let input = document.getElementById("numbers").value;
+      let arr = input.split(",").map(x => parseFloat(x.trim()));
+      if (arr.some(isNaN)) {
+        document.getElementById("result").innerText = "Введіть тільки числа через кому!";
+        return;
+      }
+      let sum = arr.reduce((a,b) => a+b, 0);
+      document.getElementById("result").innerText = "Сума: " + sum;
+    }
+  </script>
+</body>
+</html>
